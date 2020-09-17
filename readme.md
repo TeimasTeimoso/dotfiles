@@ -1,9 +1,18 @@
 # Tiling Window Manager files
 
 ## Installing bspwm
+1. Install bspwm with _sudo apt install bspwm_ 
+    + copy file to __.config/bspwm/__
+2. Install sxhkd (keybindings) with _sudo apt install sxhkd_
+    + copy file to __.config/sxhkd/__
+3. Install Rofi with _sudo apt install bspwm_
+    + copy rofi theme to __/usr/share/rofi/themes__ and config to __.config/rofi/__
 
 ## Installing polybar
-
+1. Install dependencies with _sudo apt-get install cmake cmake-data libcairo2-dev libxcb1-dev libxcb-ewmh-dev libxcb-icccm4-dev libxcb-image0-dev libxcb-randr0-dev libxcb-util0-dev libxcb-xkb-dev pkg-config python-xcbgen xcb-proto libxcb-xrm-dev libasound2-dev libmpdclient-dev libiw-dev libcurl4-openssl-dev libpulse-dev libxcb-composite0-dev xcb libxcb-ewmh2_
+2. Clone repo _git clone https://github.com/jaagr/polybar.git_
+3. Build _cd polybar && ./build.sh_
+4. Copy config file to __.config/polybar/__
 
 ## Installing Picom (compositor)
 1. _git clone https://github.com/yshui/picom && cd picom_
@@ -12,7 +21,7 @@
 4. Use meson build system to make ninja build _meson --buildtype=release . build_
 5. Consume build file _ninja -C build_
 6. Install build with _ninja -C build install_
-7. copy _picom.conf_ from this repo to _.config/picom/_
+7. copy _picom.conf_ from this repo to __.config/picom/__
 
 ## Installing i3lock FORK (screen-locker)
 0. Install dependencies with _sudo apt install libxkbcommon-dev libxkbcommon-x11-dev_
@@ -21,3 +30,15 @@
 3. _mkdir -p build && cd build_
 4. _../configure_
 5. _make && sudo make install_
+
+## Fixing tap-to-click
+Copy the following command:
+sudo mkdir -p /etc/X11/xorg.conf.d && sudo tee <<'EOF' /etc/X11/xorg.conf.d/90-touchpad.conf 1> /dev/null
+Section "InputClass"
+        Identifier "touchpad"
+        MatchIsTouchpad "on"
+        Driver "libinput"
+        Option "Tapping" "on"
+EndSection
+
+EOF

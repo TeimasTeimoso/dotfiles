@@ -32,7 +32,7 @@
 5. _make && sudo make install_
 
 ## Fixing tap-to-click
-Copy the following command:
+Copy the following command:  
 sudo mkdir -p /etc/X11/xorg.conf.d && sudo tee <<'EOF' /etc/X11/xorg.conf.d/90-touchpad.conf 1> /dev/null
 Section "InputClass"
         Identifier "touchpad"

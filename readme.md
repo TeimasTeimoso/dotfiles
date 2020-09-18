@@ -1,5 +1,8 @@
 # Tiling Window Manager files
 
+![Example](Pictures/example.png)
+
+
 ## Installing bspwm
 1. Install bspwm with _sudo apt install bspwm_ 
     + copy file to __.config/bspwm/__

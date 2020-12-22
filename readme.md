@@ -10,7 +10,7 @@ _sudo apt install bspwm_
 _sudo apt install playerctl_ for media player
 _sudo apt install xbacklight_ for light
 
-# Install FontAwesome font
+## Install FontAwesome font
 Download the font-files from _https://fontawesome.com/how-to-use/on-the-desktop/setup/getting-started_
 ##### usefull cheatsheet
 _https://fontawesome.com/cheatsheet_
@@ -30,7 +30,7 @@ _https://fontawesome.com/cheatsheet_
 6. _sudo ninja -C build install_
 7. Copy **picom.conf** from this repo to **_.config/picom/_**
 
-# Installing _rofi_
+## Installing _rofi_
 1. _sudo apt install rofi_
 2. Copy the files from repo to _.config/rofi/config_
 3. Copy the config to the directory in config file

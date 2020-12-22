@@ -4,7 +4,13 @@
 sxhkd &
 picom &
 killall polybar; polybar a &
-feh --bg-fill ~/Pictures/brain.jpg
+#feh --bg-fill ~/Pictures/portal-15497-1920x1080.jpg
+#feh --bg-fill ~/Pictures/9f1a9bdc444718b7e29ec5e17fa756d4.png
+#feh --bg-fill ~/Pictures/781830.jpg
+#feh --bg-fill ~/Pictures/wp2689657.jpg
+#feh --bg-fill ~/Pictures/thumb-1920-1049946.jpg
+feh --bg-fill ~/Pictures/951961.png
+/usr/lib/notification-daemon/notification-daemon # notification daemon
 
 bspc monitor -d 1 2 3 4 5 6 7 8 9 10
 

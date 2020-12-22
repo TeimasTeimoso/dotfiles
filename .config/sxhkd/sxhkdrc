@@ -20,7 +20,8 @@ super + Escape
 
 # lock screen
 super + l
-	i3lock -i ~/Pictures/background.png -c '#000000' -o '#191d0f' -w '#572020' -l '#ffffff' -e	
+	i3lock -i ~/Pictures/pt2.png
+	#i3lock -i ~/Pictures/background.png -c '#000000' -o '#191d0f' -w '#572020' -l '#ffffff' -e	
 	#i3lock
 
 # quit/restart bspwm
@@ -143,11 +144,11 @@ XF86Audio{Raise,Lower}Volume
 	pactl set-sink-volume 0 {+5%,-5%}
 #        amixer sset Master {5%+,5%-}
 
-#XF86MonBrightnessUp
-#	xbacklight -inc 5
+XF86MonBrightnessUp
+	xbacklight -inc 5
 
-#XF86MonBrightnessDown
-#	xbacklight -dec 5
+XF86MonBrightnessDown
+	xbacklight -dec 5
 
 XF86MonBrightness{Up,Down}
         xbacklight {-inc 10,-dec 10}

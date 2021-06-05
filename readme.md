@@ -16,7 +16,7 @@ Download the font-files from _https://fontawesome.com/how-to-use/on-the-desktop/
 _https://fontawesome.com/cheatsheet_
 
 ## Installing _polybar_
-1. _sudo apt-get install cmake cmake-data libcairo2-dev libxcb1-dev libxcb-ewmh-dev libxcb-icccm4-dev libxcb-image0-dev libxcb-randr0-dev libxcb-util0-dev libxcb-xkb-dev pkg-config python3-xcbgen xcb-proto libxcb-xrm-dev libasound2-dev libmpdclient-dev libiw-dev libcurl4-openssl-dev libpulse-dev libxcb-composite0-dev xcb libxcb-ewmh2_	
+1. _sudo apt-get install cmake cmake-data libcairo2-dev libxcb1-dev libxcb-ewmh-dev libxcb-icccm4-dev libxcb-image0-dev libxcb-randr0-dev libxcb-util0-dev libxcb-xkb-dev pkg-config python3-xcbgen xcb-proto libxcb-xrm-dev libasound2-dev libmpdclient-dev libiw-dev libcurl4-openssl-dev libpulse-dev libxcb-composite0-dev xcb libxcb-ewmh2 python3-sphinx libjsoncpp-dev _	
 2. _git clone https://github.com/jaagr/polybar.git_ 	
 3. _cd polybar && ./build.sh_ 	
 4. Copy config file from this repo to **_.config/polybar/_**

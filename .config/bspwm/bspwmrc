@@ -3,7 +3,7 @@
 # Autostart
 sxhkd &
 #picom &
-killall polybar; polybar a &
+killall polybar; polybar example &
 feh --bg-fill ~/Pictures/wallpaper.png
 #/usr/lib/notification-daemon/notification-daemon # notification daemon
 

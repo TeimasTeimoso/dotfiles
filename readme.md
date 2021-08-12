@@ -3,11 +3,10 @@
 Last tested on Ubuntu 21.04
 
 ## Alacritty
-- _sudo apt install alacritty_
+_sudo apt install alacritty_
 
 ## bspwm
-- _sudo apt install bspwm sxhkd_
-
+_sudo apt install bspwm sxhkd_
 
 ## Polybar
 ### Install dependencies

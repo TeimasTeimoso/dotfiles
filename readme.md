@@ -6,7 +6,7 @@ Last tested on Ubuntu 21.04
 _sudo apt install alacritty_
 
 ## bspwm
-_sudo apt install bspwm sxhkd_
+_sudo apt install bspwm sxhkd feh_
 
 ## Polybar
 ### Install dependencies

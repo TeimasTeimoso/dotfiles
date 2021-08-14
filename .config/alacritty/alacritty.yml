@@ -12,6 +12,7 @@ font:
     family: Source Code Pro Medium
     style: Medium
 
+  font: 8
   scale_with_dpi: true
 
 shell:

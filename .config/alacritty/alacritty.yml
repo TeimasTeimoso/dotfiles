@@ -1,0 +1,24 @@
+window:
+  dimensions:
+    columns: 98
+    lines: 25
+
+  padding:
+    x: 2
+    y: 2
+
+font:
+  normal:
+    family: Source Code Pro Medium
+    style: Medium
+  
+  scale_with_dpi: true
+
+shell:
+  program: /bin/zsh
+
+background_opacity: 0.92
+
+key_bindings:
+  - { key: N, mods: Control|Shift, action: SpawnNewInstance }
+

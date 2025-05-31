@@ -1,6 +1,5 @@
 #!/bin/sh
 # Install essential packages for a my OpenSUSE setup
-
 set -e
 
 ########################### Variables ##########################

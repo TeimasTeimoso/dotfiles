@@ -14,3 +14,7 @@ if [ $? -ne 0 ]; then
     echo "Failed to install packages. Please check the logs."
     exit 1
 fi
+
+echo "Configuring Docker to run on startup..."
+systemctl enable docker.service
+usermod -aG docker "$USER"

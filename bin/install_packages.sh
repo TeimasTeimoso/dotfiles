@@ -65,7 +65,11 @@ check_installed() {
 # Setting up VSCode repo
 echo "Adding Visual Studio Code Repo..."
 rpm --import https://packages.microsoft.com/keys/microsoft.asc
-zypper addrepo https://packages.microsoft.com/yumrepos/vscode vscode
+if ! zypper lr | grep -qw vscode; then
+    zypper addrepo https://packages.microsoft.com/yumrepos/vscode vscode
+else
+    echo "VSCode repo already exists, skipping."
+fi
 zypper refresh
 
 # Installing packages

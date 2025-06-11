@@ -8,6 +8,7 @@ ESSENTIALS=(
     git
     curl
     wget
+    zsh
     htop
     neofetch
     opi

@@ -14,8 +14,12 @@ ESSENTIALS=(
     kitty
     hyprland
     hyprland-devel
-    rofi
+    hyprpolkitagent
+    wofi
     flatpak
+    swaync
+    waybar
+    hyprpaper
 )
 
 DEVELOPMENT_TOOLS=(

@@ -70,8 +70,8 @@
 
   "custom/suse": {
     "format": " \uf314 ",
-    "min-length": 3,
-    "max-length": 3
+    "min-length": 5,
+    "max-length": 5
   },
 
   // ─────────────────────────────────────────────────────────┤ workspaces ├───
@@ -201,7 +201,7 @@
     "tooltip": false,
     "interval": 5,
     "min-length": 6,
-    "max-length": 6
+    "max-length": 8
   },
 
   // ─────────────────────────────────────────────────────────────┤ distro ├───

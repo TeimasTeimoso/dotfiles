@@ -1,0 +1,54 @@
+/* Mad Max: Fury Road Inspired Theme */
+
+* {
+  sand:        #e5c07b;
+  rust:        #b7410e;
+  fire:        #ff8800;
+  steel:       #3a3a3a;
+  oil:         #181818;
+  sky:         #5c7e99;
+  bone:        #f4e2d8;
+  blood:       #a83232;
+  chrome:      #bfc9ca;
+  warning:     #ffd700;
+  critical:    #ff3333;
+  charging:    #e5c07b;
+
+  shadow:      #101010; // approximation for shade(@oil, 0.7)
+}
+
+/* Main Colors */
+* {
+  main-bg:     @oil;
+  main-fg:     @bone;
+  main-br:     @steel; // changed from @chrome to @steel
+
+  input-bg:    @steel;
+  select-bg:   @rust;
+  select-fg:   @bone;
+}
+
+/* Module Colors */
+* {
+  module-fg:   @bone;
+  workspaces:  @steel;
+  temperature: @fire;
+  memory:      @sand;
+  cpu:         @rust;
+  distro-fg:   @oil;
+  distro-bg:   @chrome;
+  time:        @sky;
+  date:        @sand;
+  tray:        @steel;
+  pulseaudio:  @rust;
+  backlight:   @sand;
+  battery:     @blood;
+  power:       @rust;
+}
+
+/* State Colors */
+* {
+  warning:     @warning;
+  critical:    @critical;
+  charging:    @charging;
+}

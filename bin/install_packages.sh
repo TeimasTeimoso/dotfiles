@@ -24,6 +24,8 @@ ESSENTIALS=(
     hyprpaper
     brightnessctl
     libnotify-tools
+    xdg-desktop-portal
+    xdg-desktop-portal-hyprland
 )
 
 DEVELOPMENT_TOOLS=(

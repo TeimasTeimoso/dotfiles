@@ -1,0 +1,50 @@
+/* Mad Max: Fury Road Inspired Theme */
+
+/* Desert & Rust Palette */
+@define-color sand         #e5c07b;
+@define-color rust         #b7410e;   
+@define-color fire         #ff8800;
+@define-color steel        #3a3a3a;   
+@define-color oil          #181818;   
+@define-color sky          #5c7e99;   
+@define-color bone         #f4e2d8;
+@define-color blood        #a83232;   
+@define-color chrome       #bfc9ca;   
+@define-color warning      #ffd700;   
+@define-color critical     #ff3333;   
+@define-color charging     #e5c07b;  
+
+/* Main Colors */
+@define-color shadow       shade(@oil, 0.7);
+@define-color main-fg      @bone;
+@define-color main-bg      @oil;
+@define-color main-br      @chrome;
+
+@define-color active-bg    @rust;
+@define-color active-fg    @bone;
+
+@define-color hover-bg     @steel;
+@define-color hover-fg     alpha(@bone, 0.8);
+
+/* Module Colors */
+@define-color module-fg    @bone;
+@define-color workspaces   @steel;
+
+@define-color temperature  @fire;
+@define-color memory       @sand;
+@define-color cpu          @rust;
+@define-color distro-fg    @oil;
+@define-color distro-bg    @chrome;
+@define-color time         @sky;
+@define-color date         @sand;
+@define-color tray         @steel;
+
+@define-color pulseaudio   @rust;
+@define-color backlight    @sand;
+@define-color battery      @blood;
+@define-color power        @rust;
+
+/* State Colors */
+@define-color warning      @warning;
+@define-color critical     @critical;
+@define-color charging     @charging;

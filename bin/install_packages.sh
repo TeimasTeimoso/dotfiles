@@ -15,12 +15,15 @@ ESSENTIALS=(
     kitty
     hyprland
     hyprland-devel
+    hyprland-qtutils
     hyprpolkitagent
-    wofi
+    rofi-wayland
     flatpak
     swaync
     waybar
     hyprpaper
+    brightnessctl
+    libnotify-tools
 )
 
 DEVELOPMENT_TOOLS=(

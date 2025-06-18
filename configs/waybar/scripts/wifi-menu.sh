@@ -40,11 +40,11 @@ while true; do
   case "$wifi_status" in
   *"enabled"*)
     selected_option=$(echo "$options"$'\n'"$(wifi_list)" |
-      rofi -dmenu -i -selected-row 1 -config "${config}" -p " " || pkill -x rofi)
+      rofi -dmenu -i -selected-row 1 -config "${config}" -p " "  -no-lazy-grab -normal-window || pkill -x rofi)
     ;;
   *"disabled"*)
     selected_option=$(echo "$option_disabled" |
-      rofi -dmenu -i -config "${config}" -theme-str "${override_disabled}" || pkill -x rofi)
+      rofi -dmenu -i -config "${config}" -theme-str "${override_disabled}"  -no-lazy-grab -normal-window || pkill -x rofi)
     ;;
   esac
 

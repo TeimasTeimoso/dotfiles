@@ -31,7 +31,7 @@ mainbox {
 }
 
 textbox-custom {
-  font:                     "JetBrainsMono Nerd Font Bold 8";
+  font:                     "JetBrains Mono 10";
   horizontal-align:         0.5;
   padding:                  1px 0;
   expand:                   false;

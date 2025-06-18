@@ -48,9 +48,9 @@ while true; do
   bluetooth_status=$(bluetoothctl show | grep "Powered:" | awk '{print $2}')
 
   if [[ "$bluetooth_status" == "yes" ]]; then
-    selected_option=$(echo -e "$options" | rofi -dmenu -i -selected-row 1 -config "${config}" -p " " || pkill -x rofi)
+    selected_option=$(echo -e "$options" | rofi -dmenu -i -selected-row 1 -config "${config}" -p " "  -no-lazy-grab -normal-window || pkill -x rofi)
   else
-    selected_option=$(echo -e "$option" | rofi -dmenu -i -selected-row 1 -config "${config}" -theme-str "${override_disabled}" -p " " || pkill -x rofi)
+    selected_option=$(echo -e "$option" | rofi -dmenu -i -selected-row 1 -config "${config}" -theme-str "${override_disabled}" -p " "  -no-lazy-grab -normal-window || pkill -x rofi)
   fi
 
   # Exit if no option is selected

@@ -15,6 +15,8 @@ if [ $? -ne 0 ]; then
     exit 1
 fi
 
+echo "Copying configuration files..."
+bash bin/copy_configs.sh configs
 
 echo "Installing Spotify client through easyrpm..."
 spotify-easyrpm --quiet

@@ -18,6 +18,7 @@ ESSENTIALS=(
     hyprland-devel
     hyprland-qtutils
     hyprpolkitagent
+    hyprlock
     rofi-wayland
     flatpak
     dunst

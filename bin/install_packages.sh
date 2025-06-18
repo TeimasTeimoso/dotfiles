@@ -12,6 +12,7 @@ ESSENTIALS=(
     htop
     neofetch
     opi
+    spotify-easyrpm
     kitty
     hyprland
     hyprland-devel
@@ -37,7 +38,6 @@ DEVELOPMENT_TOOLS=(
 )
 
 declare -A FLATPAK_REPOS=(
-    ["Spotify"]="com.spotify.Client"
     ["Bitwarden"]="com.bitwarden.desktop"
 
 )

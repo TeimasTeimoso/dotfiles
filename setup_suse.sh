@@ -15,6 +15,10 @@ if [ $? -ne 0 ]; then
     exit 1
 fi
 
+
+echo "Installing Spotify client through easyrpm..."
+spotify-easyrpm --quiet
+
 echo "Configuring Docker to run on startup..."
 systemctl enable docker.service
 usermod -aG docker "$USER"

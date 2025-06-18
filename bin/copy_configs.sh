@@ -1,7 +1,7 @@
 #!/bin/bash
 
 CONFIGS_DIR="$1"
-if [ -z "$CONFIGS_DIRfolder" ]; then
+if [ -z "$CONFIGS_DIR" ]; then
     echo "Usage: $0 <configs_dir>"
     exit 1
 fi

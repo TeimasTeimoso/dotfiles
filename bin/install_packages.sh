@@ -20,12 +20,11 @@ ESSENTIALS=(
     hyprpolkitagent
     rofi-wayland
     flatpak
-    swaync
+    dunst
     waybar
     hyprpaper
     brightnessctl
     libnotify-tools
-    xdg-desktop-portal
     xdg-desktop-portal-hyprland
 )
 

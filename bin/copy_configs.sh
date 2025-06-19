@@ -10,6 +10,7 @@ TARGET_DIR="$HOME/.config"
 
 mkdir -p "$TARGET_DIR"
 
+echo "Copying configuration files from $CONFIGS_DIR to $TARGET_DIR"
 for folder in "$CONFIGS_DIR"/*/; do
     folder_name=$(basename "$folder")
     target_folder="$TARGET_DIR/$folder_name"
@@ -18,5 +19,11 @@ for folder in "$CONFIGS_DIR"/*/; do
         rm -rf "$target_folder"
     fi
     cp -r "$folder" "$target_folder"
-    echo "Copied $folder_name to $TARGET_DIR"
+    echo "Copied $folder_name"
 done
+
+if [ -f "$CONFIGS_DIR/zshrc" ]; then
+    echo "Copying content of zshrc to ~/.zshrc"
+    cat "$CONFIGS_DIR/zshrc" > "$HOME/.zshrc"
+    echo "Done appending zshrc"
+fi

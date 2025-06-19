@@ -25,6 +25,7 @@ ESSENTIALS=(
     waybar
     hyprpaper
     brightnessctl
+    playerctl
     libnotify-tools
     xdg-desktop-portal-hyprland
 )
@@ -100,3 +101,7 @@ done
 check_installed flatpak "${FLATPAK_REPOS[@]}"
 
 
+echo "Installing Oh-my-zsh..."
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+echo "Package installation completed successfully!"

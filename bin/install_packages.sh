@@ -1,4 +1,7 @@
 #!/bin/sh
+
+# Author: Ruben Teimas (@TeimasTeimoso)
+
 # Install essential packages for a my OpenSUSE setup
 set -e
 

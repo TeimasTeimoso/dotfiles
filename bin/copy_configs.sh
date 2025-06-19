@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# Author: Ruben Teimas (@TeimasTeimoso)
+
 CONFIGS_DIR="$1"
 if [ -z "$CONFIGS_DIR" ]; then
     echo "Usage: $0 <configs_dir>"

@@ -1,5 +1,7 @@
 #!/bin/sh
 
+# Author: Ruben Teimas (@TeimasTeimoso)
+
 if [ "$EUID" -ne 0 ]; then
 	echo "Please run as root (sudo ./setup_suse.sh)"
 	exit 1

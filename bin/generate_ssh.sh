@@ -1,4 +1,7 @@
 #!/bin/sh
+
+# Author: Ruben Teimas (@TeimasTeimoso)
+
 # Generate a new SSH key for GitHub
 # Args: [<email>] [<key_name>]
 set -e

@@ -1,0 +1,32 @@
+[global]
+    font = JetBrains Mono 10
+    frame_width = 2
+    separator_height = 2
+    padding = 16
+    horizontal_padding = 16
+    corner_radius = 6
+    transparency = 0
+
+    background = "#181818"   # oil
+    foreground = "#f4e2d8"   # bone
+    frame_color = "#3a3a3a"  # steel
+
+[urgency_low]
+    background = "#181818"   # oil
+    foreground = "#f4e2d8"   # bone
+    frame_color = "#3a3a3a"  # steel
+
+[urgency_normal]
+    background = "#3a3a3a"   # steel
+    foreground = "#f4e2d8"   # bone
+    frame_color = "#e5c07b"  # sand
+
+[urgency_critical]
+    background = "#a83232"   # blood
+    foreground = "#f4e2d8"   # bone
+    frame_color = "#ff3333"  # critical
+
+[urgency_warning]
+    background = "#ffd700"   # warning
+    foreground = "#181818"   # oil
+    frame_color = "#b7410e"  # rust

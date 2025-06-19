@@ -3,6 +3,8 @@
 # Author: Jesse Mirabel (@sejjy)
 # GitHub: https://github.com/sejjy/mechabar
 
+# Modified by: Ruben Teimas (@TeimasTeimoso)
+
 # rofi config
 config="$HOME/.config/rofi/bluetooth-menu.rasi"
 
@@ -28,14 +30,34 @@ get_device_icon() {
   esac
 }
 
-while true; do
-  # Get list of paired devices
-  bluetooth_devices=$(bluetoothctl devices | while read -r line; do
+get_paired_devices() {
+  bluetoothctl devices | while read -r line; do
     device_mac=$(echo "$line" | awk '{print $2}')
     device_name=$(echo "$line" | awk '{$1=$2=""; print substr($0, 3)}')
     icon=$(get_device_icon "$device_mac")
     echo "$icon $device_name"
-  done)
+  done
+}
+
+connect_device() {
+      local device_mac="$1"
+      local device_name="$2"
+      bluetoothctl trust "$device_mac" >/dev/null 2>&1
+      bluetoothctl pair "$device_mac" >/dev/null 2>&1
+      bluetoothctl connect "$device_mac" &
+      sleep 3
+      connection_status=$(bluetoothctl info "$device_mac" | grep "Connected:" | awk '{print $2}')
+      if [[ "$connection_status" == "yes" ]]; then
+        notify-send "Connected to \"$device_name\"." -i "package-installed-outdated"
+        exit
+      else
+        notify-send "Failed to connect to \"$device_name\"." -i "package-broken"
+      fi
+}
+
+while true; do
+  # Get list of paired devices
+  bluetooth_devices=$(get_paired_devices)
 
   options=$(
     echo "󰏌  Scan for devices"
@@ -73,33 +95,36 @@ while true; do
     exit
     ;;
   *"Scan for devices")
-    notify-send "Press '?' to show help." -i "package-installed-outdated"
-    kitty --title '󰂱  Bluetooth TUI' bash -c "bluetui" # Launch bluetui
+    # Scan bluetooth for 3 seconds
+    (
+      echo "scan on"
+      sleep 2
+      echo "scan off"
+    ) | bluetoothctl > /dev/null
+
+    available_devices=$(get_paired_devices)
+
+    if [ -z "$available_devices" ]; then
+      notify-send "No new devices found." -i "dialog-information"
+      continue
+    fi
+
+    selected_device=$(echo -e "$available_devices" | rofi -dmenu -i -config "${config}" -p "Scan Results" || pkill -x rofi)
+
+    if [ -n "$selected_device" ]; then
+      device_name="${selected_device#* }"
+      device_name="${device_name## }"
+      device_mac=$(bluetoothctl devices | grep "$device_name" | awk '{print $2}')
+      connect_device "$device_mac" "$device_name"
+    fi
     ;;
   *)
-    # Extract device name
     device_name="${selected_option#* }"
     device_name="${device_name## }"
 
     if [[ -n "$device_name" ]]; then
-      # Get MAC address
       device_mac=$(bluetoothctl devices | grep "$device_name" | awk '{print $2}')
-
-      # Trust and pair device
-      bluetoothctl trust "$device_mac" >/dev/null 2>&1
-      bluetoothctl pair "$device_mac" >/dev/null 2>&1
-
-      # Connect to device
-      bluetoothctl connect "$device_mac" &
-      sleep 3
-      connection_status=$(bluetoothctl info "$device_mac" | grep "Connected:" | awk '{print $2}')
-
-      if [[ "$connection_status" == "yes" ]]; then
-        notify-send "Connected to \"$device_name\"." -i "package-installed-outdated"
-        exit
-      else
-        notify-send "Failed to connect to \"$device_name\"." -i "package-broken"
-      fi
+      connect_device "$device_mac" "$device_name"
     fi
     ;;
   esac

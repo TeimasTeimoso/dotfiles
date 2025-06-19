@@ -1,5 +1,10 @@
 #!/usr/bin/env bash
 
+# Original Script By: Jesse Mirabel (@sejjy)
+# GitHub: https://github.com/sejjy/mechabar
+
+# Modified by: Ruben Teimas (@TeimasTeimoso)
+
 config="$HOME/.config/rofi/power-menu.rasi"
 
 actions=$(echo -e "  Lock\n  Reboot\n Shutdown\n Logout")

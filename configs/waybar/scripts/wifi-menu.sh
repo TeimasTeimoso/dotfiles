@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# Author: Jesse Mirabel (@sejjy)
+# Original Script By: Jesse Mirabel (@sejjy)
 # GitHub: https://github.com/sejjy/mechabar
 
 # rofi config

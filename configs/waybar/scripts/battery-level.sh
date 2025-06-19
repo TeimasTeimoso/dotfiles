@@ -6,11 +6,6 @@
 # Modified by Jesse Mirabel (@sejjy)
 # https://github.com/sejjy/mechabar
 
-# This script sends a notification when the battery is full, low, or critical.
-# icon theme used: tela-circle-icon-theme-dracula
-#
-# (see the bottom of the script for more information)
-
 export DBUS_SESSION_BUS_ADDRESS="unix:path=/run/user/1000/bus"
 
 # battery levels
@@ -49,32 +44,3 @@ elif [ "$BATTERY_LEVEL" -le $CRITICAL_LEVEL ] && [ "$BATTERY_STATE" == "discharg
   notify-send -a "state" "Battery Critical (${BATTERY_LEVEL}%)" "Plug in your PC now." -u critical -i "battery-empty" -r 9991
   touch $FILE_CRITICAL
 fi
-
-# systemd service
-# Add the following to ~/.config/systemd/user/battery-level.service:
-
-# [Unit]
-# Description=Battery Level Checker
-# After=graphical.target
-#
-# [Service]
-# ExecStart=%h/.config/waybar/scripts/battery-level.sh
-# Type=oneshot
-
-# systemd timer
-# Add the following to ~/.config/systemd/user/battery-level.timer:
-
-# [Unit]
-# Description=Run Battery Level Checker
-#
-# [Timer]
-# OnBootSec=1min
-# OnUnitActiveSec=1min
-# Unit=battery-level.service
-#
-# [Install]
-# WantedBy=timers.target
-
-# enable the timer by running the following commands:
-# systemctl --user daemon-reload
-# systemctl --user enable --now battery-level.timer

@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+# Original Script By: Jesse Mirabel (@sejjy)
+# GitHub: https://github.com/sejjy/mechabar
+
 model=$(awk -F ': ' '/model name/{print $2}' /proc/cpuinfo | head -n 1 | sed 's/@.*//; s/ *\((R)\|(TM)\)//g; s/^[ \t]*//; s/[ \t]*$//')
 
 # get CPU clock speeds

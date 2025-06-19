@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+# Original Script By: Jesse Mirabel (@sejjy)
+# GitHub: https://github.com/sejjy/mechabar
+
 # Define functions
 print_error() {
   cat <<"EOF"

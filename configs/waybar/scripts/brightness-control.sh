@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+# Original Script By: Jesse Mirabel (@sejjy)
+# GitHub: https://github.com/sejjy/mechabar
+
 # Print error message for invalid arguments
 print_error() {
   cat <<"EOF"

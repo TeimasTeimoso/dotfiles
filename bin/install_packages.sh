@@ -19,6 +19,7 @@ ESSENTIALS=(
     hyprland-qtutils
     hyprpolkitagent
     hyprlock
+    hyprshot
     rofi-wayland
     flatpak
     dunst

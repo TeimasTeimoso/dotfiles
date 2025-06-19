@@ -17,6 +17,7 @@ fi
 
 echo "Copying configuration files..."
 bash bin/copy_configs.sh configs
+hyprctl reload
 
 echo "Installing Spotify client through easyrpm..."
 spotify-easyrpm --quiet
@@ -24,3 +25,4 @@ spotify-easyrpm --quiet
 echo "Configuring Docker to run on startup..."
 systemctl enable docker.service
 usermod -aG docker "$USER"
+

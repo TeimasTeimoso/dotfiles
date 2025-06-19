@@ -12,5 +12,5 @@ plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
-alias zshconfig="cd ~/.zshrc"
-alias dotfiles="cd ~/Documents/dotfiles"
+alias zshconfig="nano ~/.zshrc"
+alias dotfiles="cd ~/Documents/dotfiles && code . && exit"
